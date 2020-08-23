@@ -6,8 +6,8 @@ function generatePassword() {
   var numeric = "0123456789"
   var special = ` !"#$%&'()*+,-./:;<=>?@[\]^_\`{|}~`
   var length = parseInt(prompt("How many characters long should the password be? Between 8 and 128 please", "0"), 10)
-  if (length < 8 || length > 128) {
-    alert("Please use a valid length, between 8 and 128 characters")
+  if (length < 8 || length > 128 || isNaN(length)) {
+    alert("Please use a valid length, between 8 and 128 characters, and only numbers")
     return ""
   }
   if (window.confirm("Do you want lowercase letters?")) {
